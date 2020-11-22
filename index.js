@@ -50,25 +50,17 @@ client.on('ready', () => {
 
 client.on('message', async message => {
 
+    // FOR ITSUKI TO DELETE OTHER PEOPLES MESSAGES IT NEEDS PERMS
 
     if (message.content.includes("/stats"))
-    // FOR ITSUKI TO DELETE OTHER PEOPLES MESSAGES IT NEEDS PERMS
     message.delete({ timeout: 1, reason: 'It had to be done.' }).catch(console.error);
-    
     if (message.content.includes("/invite"))
-    // FOR ITSUKI TO DELETE OTHER PEOPLES MESSAGES IT NEEDS PERMS
     message.delete({ timeout: 1, reason: 'It had to be done.' }).catch(console.error);
-    
     if (message.content.includes("/slap"))
-    // FOR ITSUKI TO DELETE OTHER PEOPLES MESSAGES IT NEEDS PERMS
     message.delete({ timeout: 1, reason: 'It had to be done.' }).catch(console.error);
-    
     if (message.content.includes("/kill"))
-    // FOR ITSUKI TO DELETE OTHER PEOPLES MESSAGES IT NEEDS PERMS
     message.delete({ timeout: 1, reason: 'It had to be done.' }).catch(console.error);
-    
     if (message.content.includes("/help"))
-    // FOR ITSUKI TO DELETE OTHER PEOPLES MESSAGES IT NEEDS PERMS
     message.delete({ timeout: 1, reason: 'It had to be done.' }).catch(console.error);
 
 
@@ -108,6 +100,10 @@ client.on('message', message =>{
 
     if(command === 'say'){
       client.commands.get('say').execute(message, args, Discord, client);
+    }
+
+    if(command === 'clear'){
+        client.commands.get('clear').execute(message, args, Discord, client);
     }
 
 });
