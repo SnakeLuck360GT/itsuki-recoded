@@ -106,6 +106,20 @@ client.on('message', message =>{
         client.commands.get('clear').execute(message, args, Discord, client);
     }
 
+    if(command === 'kick'){
+        client.commands.get('kick').execute(message, args, Discord, client);
+    }
+
+    if(command === 'ban'){
+        client.commands.get('ban').execute(message, args, Discord, client);
+    }
+
+    if(command === 'commands'){
+        client.commands.get('commands').execute(message, args, Discord, client);
+    }
+
+
 });
+ 
  
 client.login(process.env.token);
