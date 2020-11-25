@@ -62,6 +62,8 @@ client.on('message', async message => {
     message.delete({ timeout: 1, reason: 'It had to be done.' }).catch(console.error);
     if (message.content.includes("/help"))
     message.delete({ timeout: 1, reason: 'It had to be done.' }).catch(console.error);
+    if (message.content.includes("/commands"))
+    message.delete({ timeout: 1, reason: 'It had to be done.' }).catch(console.error);
 
 
     });
