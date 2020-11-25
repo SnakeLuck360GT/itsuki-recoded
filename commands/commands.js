@@ -23,7 +23,7 @@ module.exports = {
         `)
         .setColor('#FF2D00')
         message.channel.send(embed)
-    
+        .then().catch(console.error).then(d_msg => { d_msg.delete({ timeout: 5000, reason: 'It had to be done.' });})
 
         }
     }
