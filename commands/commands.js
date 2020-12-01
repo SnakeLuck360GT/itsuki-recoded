@@ -8,11 +8,11 @@ module.exports = {
         .setThumbnail('https://cdn.discordapp.com/attachments/778975549070114847/778982178302197760/9a6fd75488a71a4812f52b2b8302d045.jpg')
         .setDescription(`
         __Admin Commands__
+        \nSetup - Sets up key roles needed for commands, recommended to do before using commands.
         \nKick - Kicks a member
         \nBan - Bans a member
         \nClear -  Purges messages
-        \nMute - Mutes a member, must have set up Muted role and Member role (with the same capitalisation).
-        \nMake sure the Muted role doesn't have permissions to speak. e.g /mute @imnotatrap123 1d
+        \nMute - Mutes a member, please do /setup before trying this command.
         \nUnmute - Unmutes a member (must have above set up)
         \nDM - DM's a member
         \nSay - Makes the bot say a message.
