@@ -62,11 +62,10 @@ client.on('message', async message => {
     message.delete({ timeout: 1, reason: 'It had to be done.' }).catch(console.error);
     if (message.content.includes("/help"))
     message.delete({ timeout: 1, reason: 'It had to be done.' }).catch(console.error);
-    if (message.content.includes("/commands"))
-    message.delete({ timeout: 1, reason: 'It had to be done.' }).catch(console.error);
 
 
     });
+
 
 
  
@@ -120,9 +119,16 @@ client.on('message', message =>{
         client.commands.get('commands').execute(message, args, Discord, client);
     }
 
+    if(command === 'mute'){
+        client.commands.get('mute').execute(message, args, Discord, client);
+    }
+    
+    if(command === 'unmute'){
+        client.commands.get('unmute').execute(message, args, Discord, client);
+    }
+
 
 });
- 
- 
+
 client.login(process.env.token);
 
