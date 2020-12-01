@@ -11,6 +11,9 @@ module.exports = {
         \nKick - Kicks a member
         \nBan - Bans a member
         \nClear -  Purges messages
+        \nMute - Mutes a member, must have set up Muted role and Member role (with the same capitalisation).
+        \nMake sure the Muted role doesn't have permissions to speak. e.g /mute @imnotatrap123 1d
+        \nUnmute - Unmutes a member (must have above set up)
         \nDM - DM's a member
         \nSay - Makes the bot say a message.
         \n__General Commands__
@@ -23,7 +26,7 @@ module.exports = {
         `)
         .setColor('#FF2D00')
         message.channel.send(embed)
-        .then().catch(console.error).then(d_msg => { d_msg.delete({ timeout: 5000, reason: 'It had to be done.' });})
+    
 
         }
     }
