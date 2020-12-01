@@ -128,6 +128,10 @@ client.on('message', message =>{
         client.commands.get('unmute').execute(message, args, Discord, client);
     }
 
+    if(command === 'setup'){
+        client.commands.get('setup').execute(message, args, Discord, client);
+    }
+
 
 });
 
