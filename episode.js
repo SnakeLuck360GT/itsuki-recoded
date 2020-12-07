@@ -10,7 +10,8 @@ client.once('ready', () => {
 client.on('message', async message => {
   var server = message.guild
 
-if(server.channels.cache.find(c => c.name == "none-what-noob"))return console.log("New channel not created as it already exists")
+if(server.channels.cache.find(c => c.name == "none-what-noob"))return console.log("New channel not created as it already exists");
+  if(!server.channels.cache.find(c => c.name == "【⏸】Current Anime(s)" && c.type == "category"))return console.log("big bad");
 
   server.channels.create("none-what-noob")
   .then(channel => {
