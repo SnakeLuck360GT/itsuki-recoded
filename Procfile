@@ -1,1 +1,1 @@
-worker: node index.js & episode.js & wait -n
+worker: node index.js & node episode.js & wait -n
