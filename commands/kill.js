@@ -6,7 +6,7 @@ module.exports = {
         {
             message.channel.send(`${message.author} killed ${args.join(' ')}`)
              message.channel.send({
-                files: ['https://cdn.discordapp.com/attachments/778975549070114847/779061100665765898/tenor_4.gif']
+                files: ['https://cdn.discordapp.com/attachments/800027530580459560/800028093015785572/tenor_4.gif']
               });
 
             }
