@@ -6,7 +6,7 @@ module.exports = {
         {
             message.channel.send(`${message.author} slapped ${args.join(' ')}`)
              message.channel.send({
-                files: ['https://cdn.discordapp.com/attachments/778975549070114847/779059416686526534/tenor_3.gif']
+                files: ['https://cdn.discordapp.com/attachments/800027530580459560/800028068768907334/tenor_3.gif']
               });
 
             }
