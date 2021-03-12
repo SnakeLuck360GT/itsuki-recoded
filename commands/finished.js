@@ -23,7 +23,7 @@ const embed = new Discord.MessageEmbed()
         .setColor('#FF2D00')
         message.channel.send(embed);
 
- if(args[0] === "10")  message.channel.send("💜 | `Rated 10/10, rewatchable.`")
+if(args[0] === "10")  message.channel.send("💜 | `Rated 10/10, rewatchable.`"), message.channel.setName ("【💜】" + message.channel.name)
 
 
 }};
