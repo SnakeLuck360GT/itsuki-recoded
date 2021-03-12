@@ -6,12 +6,11 @@ module.exports = {
       
 message.delete()
 
-message.channel.setParent('652990993834049566')
-
 
 
 if(!message.channel.topic) return message.channel.send("There is no channel topic, change it to the number of episodes you want.")
 if(!args[0]) return message.channel.send("Please rate the anime with a number; `args[0]`")
+message.channel.setParent('652990993834049566')
 
 
 const embed = new Discord.MessageEmbed()
