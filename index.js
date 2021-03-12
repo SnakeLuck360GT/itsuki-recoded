@@ -132,8 +132,14 @@ client.on('message', message =>{
         client.commands.get('setup').execute(message, args, Discord, client);
     }
 
+        if(command === 'finished'){
+        client.commands.get('finished').execute(message, args, Discord, client);
+    }
+
 
 });
+
+
 
 client.login(process.env.token);
 
