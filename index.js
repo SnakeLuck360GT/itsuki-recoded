@@ -132,8 +132,8 @@ client.on('message', message =>{
         client.commands.get('setup').execute(message, args, Discord, client);
     }
 
-        if(command === 'finished'){
-        client.commands.get('finished').execute(message, args, Discord, client);
+        if(command === 'anime'){
+        client.commands.get('anime').execute(message, args, Discord, client);
     }
 
 
