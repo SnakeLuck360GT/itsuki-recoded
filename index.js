@@ -135,7 +135,10 @@ client.on('message', message =>{
         if(command === 'anime'){
         client.commands.get('anime').execute(message, args, Discord, client);
     }
-
+ 
+           if(command === 'webtoon'){
+        client.commands.get('webtoon').execute(message, args, Discord, client);
+    }
 
 });
 
