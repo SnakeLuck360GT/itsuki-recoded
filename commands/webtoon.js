@@ -44,7 +44,5 @@ const embed = new Discord.MessageEmbed()
  if(args[1] === "10")  message.channel.send("💜 | `Rated 10/10, it's good!!`")
 }
 
-if(message.channel.name === "create-channel") return;
-message.channel.setName ("【💚】" + message.channel.name)
 
 }};
