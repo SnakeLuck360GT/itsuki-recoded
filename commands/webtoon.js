@@ -6,9 +6,8 @@ module.exports = {
       
 message.delete()
 
-message.channel.setName ("【💚】" + message.channel.name)
 
-if(!args[0]) return message.channel.send("Incorrect arguments,\nExample: `/webtoon create/rate (number/name)` number of episodes");
+if(!args[0]) return message.channel.send("Incorrect arguments,\nExample: `/webtoon create/rate (number/name)` (link to webtoon)");
 
 
 if(args[0] === "create"){  
@@ -43,5 +42,8 @@ const embed = new Discord.MessageEmbed()
 
  if(args[1] === "10")  message.channel.send("💜 | `Rated 10/10, it's good!!`")
 }
+
+if(message.channel.name === "webtoon-list") return;
+message.channel.setName ("【💚】" + message.channel.name)
 
 }};
