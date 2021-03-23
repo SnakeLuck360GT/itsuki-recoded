@@ -7,25 +7,26 @@ module.exports = {
 message.delete()
 
 
-if(!args[0]) return message.channel.send("Incorrect arguments,\nExample: `/webtoon create/rate (number/name)` (link to webtoon)");
+if(!args[0]) return message.channel.send("Incorrect arguments,\nExample: `/webtoon create/rate (number/name)` (link to webtoon) (number of ep)");
 
 
 if(args[0] === "create"){  
-  if(!isFinite(args[2])) return message.channel.send("The argument: `args[2]` is not a number, and cannot be set as a channel topic, please retry the command with a valid argument.")
+  if(!isFinite(args[3])) return message.channel.send("The argument: `args[2]` is not a number, and cannot be set as a channel topic, please retry the command with a valid argument.")
 var server = message.guild
 server.channels.create(`${args[1]}`)
   .then(channel => {
     channel.setParent("822946322080071690");
-    channel.setTopic(`${args[2]}`)
-    channel.send(`/send ${args[2]}`)
-    client.channels.cache.get("822946391424892948").send(`${args[3]}`)
+    channel.setTopic(`${args[3]}`)
+    channel.setName ("【💚】" + channel.name)
+    channel.send(`/send ${args[3]}`);
+    client.channels.cache.get("822946391424892948").send(`${args[2]}`)
   })}
 
 
 
 
 if(!message.channel.topic) return message.channel.send("There is no channel topic, change it to the number of episodes you want.");
-if(!args[1] && args[0] === "rate") return message.channel.send("Please rate the anime with a number; `args[1]`");
+if(!args[1] && args[0] === "rate") return message.channel.send("Please rate the anime with a number; `args[2]`");
 
 if(args[0] === "rate"){
 message.channel.setParent('822946322080071690')
@@ -44,7 +45,5 @@ const embed = new Discord.MessageEmbed()
  if(args[1] === "10")  message.channel.send("💜 | `Rated 10/10, it's good!!`")
 }
 
-if(message.channel.name === "webtoon-list") return;
-message.channel.setName ("【💚】" + message.channel.name)
 
 }};
