@@ -17,7 +17,7 @@ server.channels.create(`${args[1]}`)
   .then(channel => {
     channel.setParent("822946322080071690");
     channel.setTopic(`${args[2]}`)
-    channel.setName ("【💚】" + channel.name)
+    channel.send(`/send ${args[2]}`)
     client.channels.cache.get("822946391424892948").send(`${args[3]}`)
   })}
 
@@ -44,5 +44,7 @@ const embed = new Discord.MessageEmbed()
  if(args[1] === "10")  message.channel.send("💜 | `Rated 10/10, it's good!!`")
 }
 
+if(message.channel.name === "webtoon-list") return;
+message.channel.setName ("【💚】" + message.channel.name)
 
 }};
