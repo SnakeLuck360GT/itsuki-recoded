@@ -42,7 +42,7 @@ const embed = new Discord.MessageEmbed()
         .setColor('#FF2D00')
         message.channel.send(embed);
 
- if(args[1] === "10")  message.channel.send("💜 | `Rated 10/10, it's good!!`")
+ if(args[2] === "10")  message.channel.send("💜 | `Rated 10/10, it's good!!`")
 }
 
 
