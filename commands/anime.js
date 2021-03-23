@@ -17,6 +17,7 @@ server.channels.create(`${args[1]}`)
   .then(channel => {
     channel.setParent("652990993834049566");
     channel.setTopic(`${args[2]}`)
+    channel.send(`/send ${args[2]}`)
   })}
 
 
