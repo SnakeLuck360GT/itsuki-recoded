@@ -143,6 +143,10 @@ client.on('message', message =>{
                if(command === 'send'){
         client.commands.get('send').execute(message, args, Discord, client);
     }
+ 
+               if(command === 'manhua'){
+        client.commands.get('manhua').execute(message, args, Discord, client);
+    }
 
 });
 
