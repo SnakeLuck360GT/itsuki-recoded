@@ -7,18 +7,17 @@ module.exports = {
 message.delete()
 
 
-if(!args[0]) return message.channel.send("Incorrect arguments,\nExample: `/manhua create (name of manhua) (number of episodes) (link to manhua)`");
+if(!args[0]) return message.channel.send("Incorrect arguments,\nExample: `/manhua create (name of manhua) (ongoing/finished) (link to manhua)`");
 
 
 if(args[0] === "create"){  
-  if(!isFinite(args[2])) return message.channel.send("The argument: `args[2]` is not a number, and cannot be set as a channel topic, please retry the command with a valid argument.")
 var server = message.guild
 server.channels.create(`${args[1]}`)
   .then(channel => {
     channel.setParent("822946322080071690");
     channel.setTopic(`${args[2]}`)
     channel.setName ("【💛】" + channel.name)
-    channel.send(`Manhua: ${args[1]}\nEpisodes/Chapters: ${args[2]}`);
+    channel.send(`Manhua: ${args[1]}\nOngoing/finished: ${args[2]}`);
     client.channels.cache.get("823698561563623435").send(`${args[3]}`)
   })}
 
