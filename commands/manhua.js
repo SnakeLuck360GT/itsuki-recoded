@@ -15,7 +15,6 @@ var server = message.guild
 server.channels.create(`${args[1]}`)
   .then(channel => {
     channel.setParent("822946322080071690");
-    channel.setTopic(`${args[2]}`)
     channel.setName ("【💛】" + channel.name)
     channel.send(`Manhua: ${args[1]}\nOngoing/finished: ${args[2]}`);
     client.channels.cache.get("823698561563623435").send(`${args[3]}`)
