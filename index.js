@@ -159,11 +159,11 @@ client.on('message', message =>{
     }
  
                    if(command === 'balance'){
-        client.commands.get('balance').execute(message, args, client, discord, profileData);
+        client.commands.get('balance').execute(message, args, client, Discord, profileData);
     }
 
                       if(command === 'beg'){
-        client.commands.get('beg').execute(message, args, client, discord, profileData);
+        client.commands.get('beg').execute(message, args, client, Discord, profileData);
     }
 
 
