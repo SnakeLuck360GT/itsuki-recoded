@@ -2,7 +2,7 @@
 module.exports = {
   name: "beg",
   description: "beg for coins",
-  async execute(message, args, client, discord, profileData) {
+  async execute(message, args, client, Discord, profileData) {
     const randomNumber = Math.floor(Math.random() * 500) + 1;
     const response = await profileModel.findOneAndUpdate(
       {
