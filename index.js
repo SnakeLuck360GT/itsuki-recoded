@@ -157,6 +157,15 @@ client.on('message', message =>{
                if(command === 'manhua'){
         client.commands.get('manhua').execute(message, args, Discord, client);
     }
+ 
+                   if(command === 'balance'){
+        client.commands.get('balance').execute(message, args, client, discord, profileData);
+    }
+
+                      if(command === 'beg'){
+        client.commands.get('beg').execute(message, args, client, discord, profileData);
+    }
+
 
 });
 
