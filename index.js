@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const ms = require('ms');
+const mongoose = require("mongoose");
  
 const prefix = '/';
  
@@ -14,6 +15,15 @@ for(const file of commandFiles){
  
     client.commands.set(command.name, command, Discord, client);
 }
+
+mongoose.connect(process.env.MONGODB_SRV, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  userFindAndModify: false
+}).then(()=>{console.log('DB connected!');
+}).catch((err) => {
+  console.log(err);
+});
  
  
 client.once('ready', () => {
