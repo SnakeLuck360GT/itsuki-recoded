@@ -4,6 +4,10 @@ const ms = require('ms');
 const mongoose = require("mongoose");
  
 const prefix = '/';
+let profileData;
+try{
+ profileData = await profileMode.findOne({ userID: message.author.id });
+}
  
 const fs = require('fs');
  
