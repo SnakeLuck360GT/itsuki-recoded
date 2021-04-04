@@ -4,9 +4,21 @@ const ms = require('ms');
 const mongoose = require("mongoose");
  
 const prefix = '/';
+
 let profileData;
-try{
- profileData = await profileMode.findOne({ userID: message.author.id });
+try {
+ profileData = await profileModel.findOne({ userID: message.author.id });
+ if(!profileData){
+  let profile = await profileModel.create({
+   userID: message.author.id,
+   serverID: message.guild.id,
+   coins: 1000,
+   bank: 0,
+  });
+  profile.save();
+ }
+} catch (err){
+    console.log(err);
 }
  
 const fs = require('fs');
