@@ -17,13 +17,9 @@ let e1 = 1
       e1++;
     }
 
-    if(args[0] === "stop"){
-        client.destroy().then(
-          client.login('Nzc2OTUwOTk2MzEyMTI5NTQ2.X68WAA.jhs4uXMopzDq0tb5cOsDj381Zx0'));
-          console.log("stop")
-    }}
 
 
 
   }
+}
 
