@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const ms = require('ms');
-const mongoose = require("mongoose");
+
+
  
 const prefix = '/';
 
@@ -16,16 +17,8 @@ for(const file of commandFiles){
  
     client.commands.set(command.name, command, Discord, client);
 }
-
-mongoose.connect(process.env.MONGODB_SRV, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  userFindAndModify: false
-}).then(()=>{console.log('DB connected!');
-}).catch((err) => {
-  console.log(err);
-});
  
+
  
 client.once('ready', () => {
     console.log('Bot Loaded!');
@@ -146,31 +139,40 @@ client.on('message', message =>{
         if(command === 'anime'){
         client.commands.get('anime').execute(message, args, Discord, client);
     }
- 
-           if(command === 'webtoon'){
-        client.commands.get('webtoon').execute(message, args, Discord, client);
-    }
- 
-               if(command === 'send'){
-        client.commands.get('send').execute(message, args, Discord, client);
-    }
- 
-               if(command === 'manhua'){
-        client.commands.get('manhua').execute(message, args, Discord, client);
-    }
- 
-                   if(command === 'balance'){
-        client.commands.get('balance').execute(message, args, client, Discord, profileData);
+
+            if(command === 'cry'){
+        client.commands.get('cry').execute(message, args, Discord, client);
     }
 
-                      if(command === 'beg'){
-        client.commands.get('beg').execute(message, args, client, Discord, profileData);
+          if(command === 'webtoon'){
+        client.commands.get('webtoon').execute(message, args, Discord, client);
     }
+
+              if(command === 'send'){
+        client.commands.get('send').execute(message, args, Discord, client);
+    }
+
+    
+              if(command === 'manhua'){
+        client.commands.get('manhua').execute(message, args, Discord, client);
+    }
+
+                  if(command === 'edit'){
+        client.commands.get('edit').execute(message, args, Discord, client);
+    }
+
+                      if(command === 'spam'){
+        client.commands.get('spam').execute(message, args, Discord, client);
+    }
+
+                          if(command === 'profile'){
+        client.commands.get('profile').execute(message, args, Discord, client);
+    }
+
+                              if(command === 'play'){
+        client.commands.get('play').execute(message, args, Discord, client);
+    }
+
 
 
 });
-
-
-
-client.login(process.env.token);
-
