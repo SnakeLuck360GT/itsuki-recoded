@@ -30,7 +30,7 @@ module.exports = {
           value: `${userinfoget.user.presence.status}`}
       )
 
-      .setFooter(`Bot made by SnakeLuck360GT#0011 • Delivered by ${client.user.username}`)
+      .setFooter(`Bot made by SnakeLuck360GT#0011 • Delivered by ${client.user.username} |\n| Do /profile (@user) to check another person's stats!`)
   
 
       message.channel.send(embed);
