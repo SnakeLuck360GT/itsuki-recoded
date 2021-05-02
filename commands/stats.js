@@ -3,6 +3,8 @@ module.exports = {
     name: 'stats',
     description: "displays stats",
     execute(message, args, Discord, client){
+
+      const UserPFP = client.user.avatarURL();
                 
         let totalSeconds = (client.uptime / 1000);
         let days = Math.floor(totalSeconds / 86400);
@@ -15,8 +17,8 @@ module.exports = {
         
         
         const embed = new Discord.MessageEmbed() 
-        .setTitle('Itsuki - Stats')
-        .setAuthor('Itsuki')
+        .setTitle(`${client.user.username} - Stats`)
+        .setAuthor(`${client.user.username}`)
         .setDescription(`**Logged in as ${client.user.tag}**
         \n Uptime: ${uptime}
         \n Users: ${client.users.cache.size}
@@ -25,7 +27,8 @@ module.exports = {
         \n Ping:  ${Math.round(client.ws.ping)}ms
         `)
         .setColor('#FF2D00')
-        .setThumbnail('https://cdn.discordapp.com/attachments/778975549070114847/778982178302197760/9a6fd75488a71a4812f52b2b8302d045.jpg')
+        .setFooter('If you want your user stats, do /profile .')
+        .setThumbnail(UserPFP)
         message.channel.send(embed)
         .then().catch(console.error).then(d_msg => { d_msg.delete({ timeout: 5000, reason: 'It had to be done.' });})
     }
