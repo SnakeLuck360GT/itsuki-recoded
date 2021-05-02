@@ -8,7 +8,8 @@ module.exports = {
 
     if(mention.id === "774587844358045696"){console.log(`${message.author.username} tried spamming you for ${args[1]} times!`)}
     
-    if(mention.id === "774587844358045696") return message.channel.send(`<@774587844358045696>, ${message.author} tried to spam you for ${args[1]} times! , but you were on the whitelist, so it was prevented.`)
+    if(mention.id === "774587844358045696"){message.channel.send(`<@774587844358045696>, ${message.author} tried to spam you for ${args[1]} times! , but you were on the whitelist, so it was prevented.`) 
+    return;}
 
 
 
