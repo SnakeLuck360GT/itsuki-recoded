@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const ms = require('ms');
-
+const buttonass = require('discord-buttons')(client);
 
  
 const prefix = '/';
@@ -17,6 +17,30 @@ for(const file of commandFiles){
  
     client.commands.set(command.name, command, Discord, client);
 }
+
+const { MessageButton } = require("discord-buttons")
+
+
+client.on('clickButton', async (button) => {
+    if (button.id === 'dumbass') {
+        button.defer()
+      button.channel.send(`${button.clicker.user.tag} is a dumbass!`);
+    }
+
+    if(button.id === 'smart') {
+        button.defer()
+
+        const embed = new Discord.MessageEmbed()
+        .setTitle("Series Finished")
+        .setDescription(`${button.channel}`)
+        .setColor("GREEN")
+
+
+        button.message.edit({embed: embed})
+    }
+
+  });
+
  
 
  
@@ -169,8 +193,9 @@ client.on('message', message =>{
         client.commands.get('profile').execute(message, args, Discord, client);
     }
 
-                              if(command === 'play'){
-        client.commands.get('play').execute(message, args, Discord, client);
+
+                                          if(command === 'button'){
+        client.commands.get('button').execute(message, args, Discord, buttonass);
     }
 
 
@@ -178,3 +203,4 @@ client.on('message', message =>{
 });
 
 client.login(process.env.token);
+
