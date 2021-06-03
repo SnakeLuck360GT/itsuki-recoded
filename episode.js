@@ -22,7 +22,7 @@ if(server.channels.cache.find(c => c.name == "none-what-noob"))return console.lo
 
 })
 
-
+// bye bye episode reactions
 
 client.login(process.env.token);
 
