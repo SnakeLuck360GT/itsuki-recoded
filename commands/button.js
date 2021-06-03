@@ -13,11 +13,22 @@ module.exports = {
 
     const yes = new MessageButton()
     .setStyle("green")
+    .setEmoji("641703416376066048")
+    .setLabel('Completed')
+    .setID("smart")
+
+    const no = new MessageButton()
+    .setStyle("green")
     .setLabel('Yes')
     .setID("smart")
 
+message.channel.send("yes", yes)
 
-    message.channel.send("Hello", yes)
+
+
+
+
+
       
   
 
