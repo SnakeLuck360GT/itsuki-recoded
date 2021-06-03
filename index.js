@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const ms = require('ms');
 const buttonass = require('discord-buttons')(client);
+const ms = require('ms');
+
 
  
 const prefix = '/';
@@ -30,22 +31,65 @@ client.on('clickButton', async (button) => {
     if(button.id === 'smart') {
         button.defer()
 
-        const embed = new Discord.MessageEmbed()
-        .setTitle("Series Finished")
-        .setDescription(`${button.channel}`)
-        .setColor("GREEN")
+        const heart = new MessageButton()
+        .setStyle("red")
+        .setEmoji("849990768008757278")
+        .setLabel("Good episode?")
+        .setID("heart")
+        
 
 
-        button.message.edit({embed: embed})
+var currentdate = new Date(); 
+var datetime = "Finished at: " + currentdate.getDate() + "/"
+    + (currentdate.getMonth()+1)  + "/" 
+    + currentdate.getFullYear() + " @ "  
+    + currentdate.getHours() + ":"  
+    + currentdate.getMinutes() + ":" 
+    + currentdate.getSeconds();
+console.log(datetime)
+ 
+
+
+
+
+button.message.edit("<a:hype:849994064425386034> | "+ `${button.message.content}`+ `\n<a:hehehi:849994109706829864> | ${datetime}` + `\n<a:heart:849990768008757278> | Good episode? : `, heart)
+    }
+    
+        if (button.id === 'heart') {
+        button.defer()
+          const end = new MessageButton()
+          .setStyle("green")
+          .setEmoji("641703416376066048")
+          .setLabel(`Done!`)
+          .setID("end")
+        
+        button.message.edit(`${button.message.content} ` + " ❤️", end)
     }
 
-  });
+    if (button.id === 'end'){
+      button.clicker.user.send("what did you expect from clicking this button")
+    }
+    
+    
+    
+    
+    
+    })
+ 
+
+
+
 
  
 
  
 client.once('ready', () => {
-    console.log('Bot Loaded!');
+    console.log('Bot Loaded!')
+    const BootChannel = "827983469945552907"
+        const shank = new Discord.MessageEmbed()
+        .setTitle('Booted Up!')
+        .setColor('RANDOM')
+        client.channels.cache.get(BootChannel).send(shank)
 });
 
 
@@ -193,6 +237,9 @@ client.on('message', message =>{
         client.commands.get('profile').execute(message, args, Discord, client);
     }
 
+                                  if(command === 'apply'){
+        client.commands.get('apply').execute(message, args, Discord, client);
+    }
 
                                           if(command === 'button'){
         client.commands.get('button').execute(message, args, Discord, buttonass);
@@ -203,4 +250,4 @@ client.on('message', message =>{
 });
 
 client.login(process.env.token);
-
+  
