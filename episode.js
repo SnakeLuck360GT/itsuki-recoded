@@ -23,11 +23,6 @@ if(server.channels.cache.find(c => c.name == "none-what-noob"))return console.lo
 })
 
 
-client.on('message', async message => {
-if(message.content.includes("Episode"))
- await message.react("770277092063445002")
-});
-// Fixed!!
 
 client.login(process.env.token);
 
