@@ -30,6 +30,19 @@ client.on('clickButton', async (button) => {
 
     if(button.id === 'smart') {
         button.defer()
+     
+       const button1 = new MessageButton()
+            .setStyle("green")
+            .setEmoji("641703416376066048")
+            .setLabel('Completed')
+            .setID("smart")
+
+        let epnum = button.message.content
+        let epnumber = epnum.slice(8)
+
+        epnumber++
+
+        button.channel.send(`Episode ` + epnumber, button1)
 
         const heart = new MessageButton()
         .setStyle("red")
