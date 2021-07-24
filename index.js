@@ -257,6 +257,23 @@ client.on('message', message =>{
                                           if(command === 'button'){
         client.commands.get('button').execute(message, args, Discord, buttonass);
     }
+ 
+         if(command === 'cat'){
+        client.commands.get('cat').execute(message, args, Discord, client);
+    }
+
+      if(command === 'ship'){
+        client.commands.get('ship').execute(message, args, Discord, client);
+    }
+
+          if(command === 'simprate'){
+        client.commands.get('simprate').execute(message, args, Discord, client);
+    }
+
+    
+          if(command === 'thotrate'){
+        client.commands.get('thotrate').execute(message, args, Discord, client);
+    }
 
 
 
