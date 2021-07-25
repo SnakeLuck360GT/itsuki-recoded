@@ -1,60 +1,66 @@
 module.exports = {
     name: 'ship',
-    description: "does a shipppp",
+    description: `does a shipppp`,
     execute(message, args, Discord, Client){
       
 
 
+
       let couplerate = Math.floor(Math.random() * 100) 
+      
+
+      let name1 = args[0].slice(0,args[0].length /2)
+      let name2 = args[1].slice(args[1].length/2)
+      let shipName = name1+name2
 
       const cp1 = new Discord.MessageEmbed()
       .setTitle(`${couplerate}% compatible! ❤️`)
-      .setDescription("🟥⬜⬜⬜⬜⬜⬜⬜⬜⬜")
+      .setDescription(`🟥⬜⬜⬜⬜⬜⬜⬜⬜⬜\n Their ship name would be: ${shipName}`)
       .setColor('RANDOM')
 
       const cp2 = new Discord.MessageEmbed()
       .setTitle(`${couplerate}% compatible! ❤️`)
-      .setDescription("🟥🟥⬜⬜⬜⬜⬜⬜⬜⬜")
+      .setDescription(`🟥🟥⬜⬜⬜⬜⬜⬜⬜⬜\n Their ship name would be: ${shipName}`)
       .setColor('RANDOM')
       
       const cp3 = new Discord.MessageEmbed()
       .setTitle(`${couplerate}% compatible! ❤️`)
-      .setDescription("🟥🟥🟥⬜⬜⬜⬜⬜⬜⬜")
+      .setDescription(`🟥🟥🟥⬜⬜⬜⬜⬜⬜⬜\n Their ship name would be: ${shipName}`)
       .setColor('RANDOM')
 
       const cp4 = new Discord.MessageEmbed()
       .setTitle(`${couplerate}% compatible! ❤️`)
-      .setDescription("🟥🟥🟥🟥⬜⬜⬜⬜⬜⬜")
+      .setDescription(`🟥🟥🟥🟥⬜⬜⬜⬜⬜⬜\n Their ship name would be: ${shipName}`)
       .setColor('RANDOM')
 
       const cp5 = new Discord.MessageEmbed()
       .setTitle(`${couplerate}% compatible! ❤️`)
-      .setDescription("🟥🟥🟥🟥🟥⬜⬜⬜⬜⬜")
+      .setDescription(`🟥🟥🟥🟥🟥⬜⬜⬜⬜⬜\n Their ship name would be: ${shipName}`)
       .setColor('RANDOM')
 
       const cp6 = new Discord.MessageEmbed()
       .setTitle(`${couplerate}% compatible! ❤️`)
-      .setDescription("🟥🟥🟥🟥🟥🟥⬜⬜⬜⬜")
+      .setDescription(`🟥🟥🟥🟥🟥🟥⬜⬜⬜⬜\n Their ship name would be: ${shipName}`)
       .setColor('RANDOM')
 
       const cp7 = new Discord.MessageEmbed()
       .setTitle(`${couplerate}% compatible! ❤️`)
-      .setDescription("🟥🟥🟥🟥🟥🟥🟥⬜⬜⬜")
+      .setDescription(`🟥🟥🟥🟥🟥🟥🟥⬜⬜⬜\n Their ship name would be: ${shipName}`)
       .setColor('RANDOM')
 
       const cp8 = new Discord.MessageEmbed()
       .setTitle(`${couplerate}% compatible! ❤️`)
-      .setDescription("🟥🟥🟥🟥🟥🟥🟥🟥⬜⬜")
+      .setDescription(`🟥🟥🟥🟥🟥🟥🟥🟥⬜⬜\n Their ship name would be: ${shipName}`)
       .setColor('RANDOM')
 
       const cp9 = new Discord.MessageEmbed()
       .setTitle(`${couplerate}% compatible! ❤️`)
-      .setDescription("🟥🟥🟥🟥🟥🟥🟥🟥🟥⬜")
+      .setDescription(`🟥🟥🟥🟥🟥🟥🟥🟥🟥⬜\n Their ship name would be: ${shipName}`)
       .setColor('RANDOM')
 
       const cp10 = new Discord.MessageEmbed()
       .setTitle(`${couplerate}% compatible! ❤️`)
-      .setDescription("❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️")
+      .setDescription(`❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️`)
       .setColor('RANDOM')
 
 
