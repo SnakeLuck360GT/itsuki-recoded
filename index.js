@@ -134,24 +134,6 @@ client.on('ready', () => {
 
 
 
-client.on('message', async message => {
-
-    // FOR ITSUKI TO DELETE OTHER PEOPLES MESSAGES IT NEEDS PERMS
-
-    if (message.content.includes("/stats"))
-    message.delete({ timeout: 1, reason: 'It had to be done.' }).catch(console.error);
-    if (message.content.includes("/invite"))
-    message.delete({ timeout: 1, reason: 'It had to be done.' }).catch(console.error);
-    if (message.content.includes("/slap"))
-    message.delete({ timeout: 1, reason: 'It had to be done.' }).catch(console.error);
-    if (message.content.includes("/kill"))
-    message.delete({ timeout: 1, reason: 'It had to be done.' }).catch(console.error);
-    if (message.content.includes("/help"))
-    message.delete({ timeout: 1, reason: 'It had to be done.' }).catch(console.error);
-
-
-    });
-
 
 
  
