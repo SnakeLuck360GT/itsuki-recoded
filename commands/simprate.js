@@ -46,7 +46,7 @@ module.exports = {
 
       const simp7 = new Discord.MessageEmbed()
       .setTitle(`You are ${simprate}% simp!`)
-      .setDescription("🟥🟥🟥🟥🟥🟥🟥🟥⬜⬜⬜")
+      .setDescription("🟥🟥🟥🟥🟥🟥🟥⬜⬜⬜")
       .setColor('RANDOM')
 
       const simp8 = new Discord.MessageEmbed()
