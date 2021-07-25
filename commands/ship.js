@@ -39,7 +39,7 @@ module.exports = {
 
       const cp7 = new Discord.MessageEmbed()
       .setTitle(`${couplerate}% compatible! ❤️`)
-      .setDescription("🟥🟥🟥🟥🟥🟥🟥🟥⬜⬜⬜")
+      .setDescription("🟥🟥🟥🟥🟥🟥🟥⬜⬜⬜")
       .setColor('RANDOM')
 
       const cp8 = new Discord.MessageEmbed()
