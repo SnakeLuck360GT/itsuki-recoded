@@ -5,7 +5,7 @@ const ms = require('ms');
 
 
  
-const prefix = '/';
+const prefix = '$';
 
  
 const fs = require('fs');
